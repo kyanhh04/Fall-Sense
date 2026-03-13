@@ -44,8 +44,8 @@ ID_DISTANCE_PX = 80
 MOTION_THRESHOLD = 40
 MOTION_MIN_AREA = 5000
 
-TELEGRAM_BOT_TOKEN = "8796214893:AAE20eD3CCcGFIzH9eVAJ_6xFFFcLDFwEB4"
-TELEGRAM_CHAT_ID = "1773813025"
+TELEGRAM_BOT_TOKEN = ""
+TELEGRAM_CHAT_ID = ""
 
 TILE_W, TILE_H = 640, 360
 PRE_EVENT_SECONDS = 5
@@ -322,7 +322,7 @@ class DetectorThread(threading.Thread):
             if f is not None: out.write(f)
             time.sleep(1.0/max(1,fps))
         out.release()
-        print(f"[{self.name}] 💾 Saved clip: {vid_path}")
+        print(f"[{self.name}]  Saved clip: {vid_path}")
 
     def _set_vis(self, frame):
         vis=cv2.resize(frame,(TILE_W,TILE_H))
